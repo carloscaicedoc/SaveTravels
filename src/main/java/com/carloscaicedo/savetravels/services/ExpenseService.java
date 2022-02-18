@@ -24,7 +24,7 @@ public class ExpenseService {
 		return expeRepo.findAll();
 	}
 	
-	public Expense oneExpense(Long id) {
+	public Expense findExpense(Long id) {
 		Optional<Expense> optionalExpense = expeRepo.findById(id);
 		if(optionalExpense.isPresent()) {
 			return optionalExpense.get();
